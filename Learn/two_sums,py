@@ -1,0 +1,15 @@
+# THis is the classic Hash Map look up problem. We use Python Dictionary as the Hash map.
+# The logic is to store the value of the list element as the key of the dictionary and index as the value.
+
+
+def twoSums(nums, target):
+    seen = {}
+    for i,num in enumerate(nums):
+        complement = target - num
+        if complement in seen:
+            return ([i, seen[complement]])
+        else:
+            seen[num] = i
+
+
+    
