@@ -4,7 +4,7 @@ class Solution:
 
         for i in nums:
             if i in seen:
-                return False
+                return True
             else:
                 seen.add(i)
-        return True
+        return False
