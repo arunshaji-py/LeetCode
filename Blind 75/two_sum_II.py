@@ -24,11 +24,5 @@ Notes
 
 - Pointers hold the list index with them. use nums[left] and nums[right] to access the values on that index.
 - In problems which asks if k numbers adds to a target. The trick is to 
-     * Sort the list first.
-     * Fix k-2 numbers with nested loops. 
-     * Fix the last 2 numbers with 'left' and 'right' pointers.
-
-
-
-
+  
 """
