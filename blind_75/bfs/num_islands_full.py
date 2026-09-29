@@ -1,3 +1,5 @@
+#The complete solution for bfs.
+#Time complexity: outer loop O(mxn), bfs call O(mxn). so O(mxn)+ O(mxn) = O(2(mxn)) = O(mxn)
 from collections import deque
 
 
