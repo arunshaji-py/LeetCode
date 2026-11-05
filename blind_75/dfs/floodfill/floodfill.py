@@ -19,7 +19,7 @@ class Solution:
                 c < 0 or c >= cols or
                 image[r][c] != original_color
             ):
-                return
+                return image
             
             #if a cell with same color found, recolor it before
             #moving to neibouring cell. 
