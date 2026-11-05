@@ -26,6 +26,43 @@ Ajcacent means:
 - Return the 'minimum number of minutes' required until no fresh orange is left.
 - If it is impossible for every fresh orange to become rotten, return -1. 
 
+### Important Concept **level order BFS** 
+
+Every level of BFS represents one minute. We deliberately process the queue level by level. 
+
+The technique is to use the for loop wisely.
+
+The trick: Process one BFS level at a time
+Before processing a minute, we record:
+level_size = len(queue)
+
+
+Suppose:
+queue = deque([    (0,0),    (2,2)])
+
+
+Then:
+level_size = 2
+
+
+Now we process exactly 2 oranges:
+for _ in range(level_size):    r, c = queue.popleft()    # Rot neighbours    # Add newly rotten oranges to queue
+
+
+Any newly rotten oranges are added to the back of the queue, but they are not processed yet because this for loop only runs level_size times.
+
+Once those 2 oranges have finished spreading:
+minutes += 1
+
+
+Now the queue contains only the oranges that became rotten during the previous minute.
+
+Those will spread during the next minute.
+
+
+### Pattern to remember
+If a problem says something spreads simultaneously every minute, every second, every step, or every level, your first thought should be "Can I solve this with level-order BFS?"
+
 # Why is this a Graph Problem?
 
 A 2D grid can be viewed as a graph.
