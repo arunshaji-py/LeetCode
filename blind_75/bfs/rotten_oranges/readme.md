@@ -59,6 +59,19 @@ Now the queue contains only the oranges that became rotten during the previous m
 
 Those will spread during the next minute.
 
+### Use of Deque as Queue, append() and popleft()
+
+***append()***
+We use append() to add cells to the queue. append() will add new items to the right.
+
+***popleft()***
+we use popleft() to take out the first added items. 
+
+So, the rotten oranges first added will get processed 1st and then the oranges that are added later gets processed. 
+
+So it is a Queue or it will be a stack. 
+
+
 
 ### Pattern to remember
 If a problem says something spreads simultaneously every minute, every second, every step, or every level, your first thought should be "Can I solve this with level-order BFS?"
