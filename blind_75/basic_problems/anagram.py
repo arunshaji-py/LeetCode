@@ -9,7 +9,7 @@ class Solutions:
 
         count = {}
         for char in s:
-            count[char] = count.get(char,0) + 1 
+            count[char] = count.get("char",0) + 1
         
         #substract using t
         for char in t:
